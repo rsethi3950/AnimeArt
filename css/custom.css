@@ -1,0 +1,114 @@
+/*MODAL IMAGES TO ENTER*/
+
+
+
+body{
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	background-image: linear-gradient(to bottom, #434343 0%, black 100%);
+}
+
+
+
+.container1{
+	background-color: #003366;
+}
+
+.neon {
+    position: relative;
+    overflow: hidden;
+    padding-top: 20px;
+    filter: brightness(200%);
+    background-color: #000000;
+    text-align: center;
+}
+
+.text {
+    background-color: black;
+    color: white;
+    font-size: 180px;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    position: relative;
+    user-select: none;
+    border-top: 6px solid lawngreen;
+    border-bottom: 6px solid lawngreen;
+
+}
+
+.text::before {
+    content: attr(data-text);
+    position: absolute;
+    color: white;
+    filter: blur(0.02em);
+    mix-blend-mode: difference;
+}
+
+.gradient {
+    position: absolute;
+    background: linear-gradient(45deg, red, gold, lightgreen, gold, red);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    mix-blend-mode: multiply;
+}
+
+.spotlight {
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(
+            circle,
+            white,
+            transparent 25%
+        ) center / 25% 25%,
+        radial-gradient(
+            circle,
+            white,
+            black 25%
+        ) center / 12.5% 12.5%;
+    animation: light 5s linear infinite;
+    mix-blend-mode: color-dodge;
+}
+
+@keyframes light {
+    to {
+        transform: translate(50%, 50%);
+    }
+}
+
+
+
+.container{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+img{
+	width: 350px;
+	height: 300px;
+	margin: 10px;
+	border-radius: 30px;
+	transition: all 1s;
+	box-shadow: 2px;
+}
+
+img:hover{
+	transform: scale(1.1);
+	cursor: none;
+}
+
+footer{
+	text-align: center;
+	font-weight: 700;
+	color: #000000;
+	box-sizing: 3em;
+	background-color: #87cefa;
+}
+
+
