@@ -26,7 +26,7 @@ app.use(express.static("./"));//middleware for static files, not for ejs files
 app.get('/',function(req,res){
 	Photo.find({}, ['path','title','category','caption'], {sort:{ _id: -1} }, function(err, photos) {
      if(err) throw err;
-     res.render('index', { root:__dirname,photolist : photos });   
+     res.render('index', { photolist : photos });   
 });	
 })
 
@@ -47,10 +47,9 @@ upload(req, res,(error) => {
           
           res.redirect('/?msg=2');
         }else{
+        
+              // Create new record in mongoDB
              
-            /**
-             * Create new record in mongoDB
-             */
             var fullPath = "files/"+req.file.filename;
             var document = {
               path:     fullPath, 
@@ -65,6 +64,7 @@ upload(req, res,(error) => {
               throw error;
             } 
             res.redirect('/?msg=1');
+            console.log('successful');
          });
       }
     }
