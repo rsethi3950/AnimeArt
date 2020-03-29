@@ -55,7 +55,7 @@ upload(req, res,(error) => {
         
               // Create new record in mongoDB
              
-            var fullPath = "../upload/"+req.file.filename;
+            var fullPath = "uploads/"+req.file.filename;
             var document = {
               path:     fullPath, 
               caption:  caption,
