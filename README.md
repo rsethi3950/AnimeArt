@@ -1,6 +1,6 @@
 # AnimeArt
 to make changes to this:
-1. fork this repository(top right corner
+1. fork this repository(top right corner)
 2. go to your own github profile: github.com/username
 3. go to repositories section
 4. open this repository
