@@ -70,11 +70,11 @@ upload(req, res,(error) => {
 
 });
 
-app.listen(3000, function(){
-	console.log("server running");
+let port = process.env.PORT;
+if(port==null || port ==""){
+    port=3000;
+}
+app.listen(port,()=>{
+    console.log("server running");
 });
-// need random port when one is busy
-// app.listen(0, function(){
-// 	console.log("server running");
-// });
 
