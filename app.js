@@ -4,17 +4,17 @@ var fs= require('fs');
 var mongoose= require('mongoose');
 var Schema = mongoose.Schema;
 var ejs= require('ejs');
-// const ejsLint = require('ejs-lint');
 var multer= require('multer');
-//app.use(express.static("public")); 
 var app = express();
 app.set('view engine','ejs');
 var upload    = require('./upload');
 app.use(bodyParser.json());
 app.use(multer({dest:'./uploads/'}).single('photo'));
 app.use(express.static("./"));//middleware for static files, not for ejs files
-// how to make mongo connection?
-mongoose.connect('mongodb://localhost:27017/app', { useNewUrlParser: true,  useUnifiedTopology: true });
+// establish mongo connection
+
+const url= "mongodb+srv://Riya:fPAeiJWCVe7FkUIT@cluster0.sizlk.mongodb.net/app?retryWrites=true&w=majority";
+mongoose.connect(url, { useNewUrlParser: true,  useUnifiedTopology: true });
 var photoSchema = new Schema({ 
 	path: String,
 	title: String,
@@ -22,8 +22,6 @@ var photoSchema = new Schema({
 	caption: String
  });
 var Photo = mongoose.model('Photos',photoSchema);
-
-
 app.get('/',function(req,res){
 	Photo.find({}, ['path','title','category','caption'], {sort:{ _id: -1} }, function(err, photos) {
      if(err) throw err;
@@ -35,11 +33,6 @@ app.get('/upload',function(req,res){
 	res.sendFile('dashboard.html', { root : __dirname});
 })
 app.post('/upload',function(req,res){
- // var newItem = new Item();
- // newItem.img.data = fs.readFileSync(req.files.userPhoto.path)
- // newItem.img.contentType = 'image/jpg';
- // newItem.save();
-
  //this is to send something to req.
  const title =(req.body.title);
  const category =(req.body.category);

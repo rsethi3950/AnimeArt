@@ -51,8 +51,8 @@
         <p class="Val" style="font-size: medium; font-weight: bold;color: black; text-transform: uppercase; font-style: Georgia;"><%=photolist[i].title%></p>
         <%var path=photolist[i].path%>
         <img src="<%=path%>" class="responsive-img">
-        <p class="Val">Type:<%=photolist[i].category%></p>
-        <p class="Val"><%=photolist[i].caption%></p>
+        <p class="Val"style="color: white">Type:<%=photolist[i].category%></p>
+        <p class="Val" style="color: white"><%=photolist[i].caption%></p>
       </div>
       <%if (((i+1) % 3) == 0 ) {%>
     </div>
