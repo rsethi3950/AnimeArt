@@ -7,38 +7,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>
-    ANIMEART
+    VCRAVEART
   </title>
+
   <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
   <link href="css/custom.css" type="text/css" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
     integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
     integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+   
 </head>
 
 <body>
-  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container1">
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav" class="navbar-right" id="header">
-          <li>
-            <a href="#"><i class="fas fa-paint-brush"></i></a>
-          </li>
-          <li>
-            <a href="#bottom">About</a>
-          </li>
-          <li>
-            <a href="#bottom">Contacts</a>
-          </li>
-          <li class="active">
-            <a href="#">Portfolio</a>
-          </li>
-        </ul>
+  <nav class="navbar navbar-inverse mb-0 navbar-fixed-top" role="navigation ">
+   
+        
+    <div class="container-fluid container1">
+     
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        
+        <a class="navbar-brand" href="#"><i class="fas fa-paint-brush"></i>VCRAVEART</a>
       </div>
-    </div>
+  
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#"><i class="fa fa-picture-o" aria-hidden="true"></i> Gallery</a></li>
+          <li><a href="#bottom"><i class="fa fa-user"
+            aria-hidden="true"></i> About</a></li>
+          <li><a href="#bottom"><i class="fa fa-address-book"
+            aria-hidden="true"></i> Contact</a></li>
+        </ul>
+        
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="https://riya-sethi.herokuapp.com/Webpage-Resume-master/index.html"><span style="color: black;"><strong>RIYA SETHI</strong> </span> </a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
   </nav>
-
+  
   <div class="jumbotron mb-0" >
    
         <div class="neon d-flex">
@@ -52,23 +67,6 @@
   </div>
   
   <!-- for dynamic data use templating -->
-  <!-- <div class="container">
-    <%if(photolist.length){%>
-    <div class="row">
-      <%for(var i=0; i < photolist.length; i++){%>
-      <div class="col-md-4">
-        <p class="Val" style="font-size: medium; font-weight: bold;color: black; text-transform: uppercase; font-style: Georgia;"><%=photolist[i].title%></p>
-        <%var path=photolist[i].path%>
-        <img src="<%=path%>" class="responsive-img">
-        <p class="Val"style="color: white">Type:<%=photolist[i].category%></p>
-        <p class="Val" style="color: white"><%=photolist[i].caption%></p>
-      </div>
-      <%if (((i+1) % 3) == 0 ) {%>
-    </div>
-    <div class="row">
-      <%}}}%>
-    </div>
-  </div> -->
 
   <div class="container" style="margin-bottom: 10px;margin-top: 10px;">
     <%if(photolist.length){%>
@@ -93,6 +91,7 @@
       <%}%>
         </div>
       <%}%>
+      <div id="particles-js"></div>
     </div>
 
     <section id="bottom">
@@ -111,7 +110,7 @@
               <!-- Content -->
               <h5 class="text-uppercase " style="font-weight: 900">ABOUT ME</h5>
               <p>
-                Just me myself exploring the universe. I want to share my small world with you.
+                Just exploring and collaborating the learnings. Here, I want to present my small world with you all.
                 Tried to put them in this template form with the assistance of my friend <a
                   href="https://github.com/coder-1234"><span style="font-family: lobster;">HITARTH</span></a>.
               </p>
@@ -174,6 +173,15 @@
       </footer>
       <!-- Footer -->
     </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="../particles.js"></script>
 </body>
 
 </html>
