@@ -49,7 +49,6 @@
   </script>
   <nav class="navbar navbar-inverse mb-0 navbar-fixed-top" role="navigation ">
    
-        
     <div class="container-fluid container1">
      
       <!-- Brand and toggle get grouped for better mobile display -->
@@ -61,21 +60,24 @@
           <span class="icon-bar"></span>
         </button>
         
-        <a class="navbar-brand" href="#"><i class="fas fa-paint-brush"></i>VCRAVEART</a>
+        <a class="navbar-brand" style = "color:blanchedalmond" href="#"><strong><i class="fas fa-paint-brush"></i>VCRAVEART</strong></a>
       </div>
   
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="#"><i class="fa fa-picture-o" aria-hidden="true"></i> Gallery</a></li>
-          <li><a href="#bottom"><i class="fa fa-user"
+          <li class="nav-item active"><a href="#"><i class="fa fa-picture-o" aria-hidden="true"></i> Gallery</a></li>
+          <li class="nav-item"><a href="#bottom" ><i class="fa fa-user"
             aria-hidden="true"></i> About</a></li>
-          <li><a href="#bottom"><i class="fa fa-address-book"
+          <li class="nav-item"><a href="#bottom"><i class="fa fa-address-book"
             aria-hidden="true"></i> Contact</a></li>
         </ul>
         
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="https://riya-sethi.herokuapp.com/Webpage-Resume-master/index.html"><span style="color: black;"><strong>RIYA SETHI</strong> </span> </a></li>
+          <!-- <li><a href="https://riya-sethi.herokuapp.com/Webpage-Resume-master/index.html"><span style="color: black;"><strong>RIYA SETHI</strong> </span> </a></li> -->
+          <li><a id="light" href="#" role="button" class="btn btn-light active" style="margin-top:4px; margin-right:5px ; color: black; background-color: white; padding: 5px;">Light</a></li>
+          <li><a id="dark" href="#" role="button" class="btn btn-dark " style="margin-top:4px;margin-right:5px;color: white; background-color: black;padding: 5px;">Dark</a></li>
+         <!-- <button class="button" class="btn btn-dark" style="color: white; background-color: black;">Dark</button> -->
         </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
@@ -84,7 +86,7 @@
   <div class="jumbotron mb-0" >
    
         <div class="neon d-flex">
-          <h1 class="display-1" style="font-size: 85px;">
+          <h1 class="display-1">
           <span class="text" data-text="vcraveart">vcraveart</span>
           <span class="gradient"></span>
           <span class="spotlight"></span>
@@ -101,7 +103,7 @@
       <%for(var i=0; i < photolist.length; i++){%>
       <div class="col-12 col-md-4">
         <div class="card d-flex justify-content-center"
-          style="margin-bottom:10px;border-radius: 10px;width: auto;height: 450px;background-image: linear-gradient(to bottom, #006699 1%, #ccffcc 100%);">
+          style="margin-bottom:18px;border-radius: 10px;width: auto;height: 450px;background-image: linear-gradient(to bottom, #006699 0%, #ffffff 100%);">
           <%var path=photolist[i].path%>
           <img src="<%=path%>" class="card-img-top img-fluid" alt="...">
           <div class="card-body" style="padding: 10px;">
@@ -207,6 +209,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
   </script>
+  <script src="../custom.js"></script>
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script src="../particles.js"></script>
 </body>
