@@ -4,7 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>
     ANIMEART
   </title>
@@ -12,7 +13,8 @@
   <link href="css/custom.css" type="text/css" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
     integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 
 <body>
@@ -37,13 +39,20 @@
     </div>
   </nav>
 
-  <div class="neon">
-    <span class="text" data-text="vcraveart">vcraveart</span>
-    <span class="gradient"></span>
-    <span class="spotlight"></span>
+  <div class="jumbotron mb-0" >
+   
+        <div class="neon d-flex">
+          <h1 class="display-1" style="font-size: 85px;">
+          <span class="text" data-text="vcraveart">vcraveart</span>
+          <span class="gradient"></span>
+          <span class="spotlight"></span>
+         </h1>
+    </div>
+    
   </div>
-<!-- for dynamic data use templating -->
-  <div class="container">
+  
+  <!-- for dynamic data use templating -->
+  <!-- <div class="container">
     <%if(photolist.length){%>
     <div class="row">
       <%for(var i=0; i < photolist.length; i++){%>
@@ -59,7 +68,32 @@
     <div class="row">
       <%}}}%>
     </div>
-  </div>
+  </div> -->
+
+  <div class="container" style="margin-bottom: 10px;margin-top: 10px;">
+    <%if(photolist.length){%>
+    <div class="row">
+      <%for(var i=0; i < photolist.length; i++){%>
+      <div class="col-12 col-md-4">
+        <div class="card d-flex justify-content-center"
+          style="margin-bottom:10px;border-radius: 10px;background-color: white;width: auto;height: 450px;">
+          <%var path=photolist[i].path%>
+          <img src="<%=path%>" class="card-img-top img-fluid" alt="...">
+          <div class="card-body" style="padding: 10px;">
+            <h3 class="card-title"><%=photolist[i].title%></h3>
+            <h5 class="card-title">Category : <span
+                style="display:inline; color: blue;"><%=photolist[i].category%></span>
+            </h5>
+            <h5 class="card-title">
+              <Caption>Caption : </Caption><span style="display:inline; color: blue;"><%=photolist[i].caption%></span>
+            </h5>
+          </div>
+        </div>
+      </div>
+      <%}%>
+        </div>
+      <%}%>
+    </div>
 
     <section id="bottom">
       <!-- Footer -->
@@ -77,8 +111,9 @@
               <!-- Content -->
               <h5 class="text-uppercase " style="font-weight: 900">ABOUT ME</h5>
               <p>
-                Just me myself exploring the universe. I want to share my small world with you. 
-                Tried to put them in this template form with the assistance of my friend <a href="https://github.com/coder-1234"><span style="font-family: lobster;">HITARTH</span></a>.
+                Just me myself exploring the universe. I want to share my small world with you.
+                Tried to put them in this template form with the assistance of my friend <a
+                  href="https://github.com/coder-1234"><span style="font-family: lobster;">HITARTH</span></a>.
               </p>
 
             </div>
@@ -89,38 +124,38 @@
 
               <!-- Content -->
               <h5 class="text-uppercase " style="font-weight: 900">CONTACT ME</h5>
-              
-                <p>
-                  <div>
-                    <a href="mailto:riyasethi941@gmail.com">
-                      <span class="fa-stack fa-2x">
-                        <i class="fa fa-circle fa-stack-2x"></i>
-                        <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
-                      </span>
-                      &nbsp;
-                      &nbsp;
-                      &nbsp;
-                    </a>
-                    <a href=" ">
-                      <span class="fa-stack fa-2x">
-                        <i class="fa fa-circle fa-stack-2x"></i>
-                        <i class="fa fa-phone fa-stack-1x fa-inverse"></i>
-                      </span>
-                      &nbsp;
-                      &nbsp;
-                      &nbsp;
-                    </a>
-                     
-                    <a href="https://www.instagram.com/craving_for_art/?hl=en">
-                      <span class="fa-stack fa-2x">
-                        <i class="fa fa-circle fa-stack-2x"></i>
-                        <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
-                      </span>
-                      &nbsp;
-                      &nbsp;
-                    </a>
-                  </div>
-                </p>
+
+              <p>
+                <div>
+                  <a href="mailto:riyasethi941@gmail.com">
+                    <span class="fa-stack fa-2x">
+                      <i class="fa fa-circle fa-stack-2x"></i>
+                      <i class="fa fa-envelope-o fa-stack-1x fa-inverse"></i>
+                    </span>
+                    &nbsp;
+                    &nbsp;
+                    &nbsp;
+                  </a>
+                  <a href=" ">
+                    <span class="fa-stack fa-2x">
+                      <i class="fa fa-circle fa-stack-2x"></i>
+                      <i class="fa fa-phone fa-stack-1x fa-inverse"></i>
+                    </span>
+                    &nbsp;
+                    &nbsp;
+                    &nbsp;
+                  </a>
+
+                  <a href="https://www.instagram.com/craving_for_art/?hl=en">
+                    <span class="fa-stack fa-2x">
+                      <i class="fa fa-circle fa-stack-2x"></i>
+                      <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                    </span>
+                    &nbsp;
+                    &nbsp;
+                  </a>
+                </div>
+              </p>
 
             </div>
             <!-- Grid column -->

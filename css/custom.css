@@ -1,7 +1,6 @@
 /*MODAL IMAGES TO ENTER*/
 
 
-
 body{
 	font-family: "Comic Sans MS", cursive, sans-serif;
 	background-image: linear-gradient(to bottom, #434343 0%, black 100%);
@@ -12,20 +11,23 @@ body{
 .container1{
 	background-color: #003366;
 }
+.jumbotron{
+    background-color: #000000;
+}
 
 .neon {
     position: relative;
     overflow: hidden;
+    background-color: #000000;
     padding-top: 20px;
     filter: brightness(200%);
-    background-color: #000000;
     text-align: center;
 }
 
 .text {
     background-color: black;
     color: white;
-    font-size: 180px;
+    /* font-size:15em; */
     font-weight: bold;
     font-family: sans-serif;
     text-transform: uppercase;
@@ -90,9 +92,10 @@ body{
 }
 
 img{
-	width: 350px;
-	height: 300px;
-	margin: 10px;
+	width: 320px;
+    height: 300px;
+    margin:10px;
+    margin-left: 18px;
 	border-radius: 30px;
 	transition: all 1s;
 	box-shadow: 2px;
