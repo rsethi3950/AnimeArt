@@ -47,6 +47,22 @@
       });
     });
   </script>
+  
+  <div class="modal fade in modal-fullscreen-xs-down" id="modal-fullscreen-xs-down" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true" >X</button>
+            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+          </div>
+          <div class="modal-body">
+            <img src=".." style="height: 100%;width: 100%;" id="myImg">
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
   <nav class="navbar navbar-inverse mb-0 navbar-fixed-top" role="navigation ">
    
     <div class="container-fluid container1">
@@ -101,13 +117,17 @@
     <%if(photolist.length){%>
     <div class="row">
       <%for(var i=0; i < photolist.length; i++){%>
+
       <div class="col-12 col-md-4">
         <div class="card d-flex justify-content-center"
-          style="margin-bottom:18px;border-radius: 10px;width: auto;height: 450px;background-image: linear-gradient(to bottom, #006699 0%, #ffffff 100%);">
+          style="margin-bottom:20px;border-radius: 10px;width: auto;height: 450px;background-image: linear-gradient(to bottom, #006699 0%, #ffffff 100%);">
           <%var path=photolist[i].path%>
-          <img src="<%=path%>" class="card-img-top img-fluid" alt="...">
+          <%var title=photolist[i].title%>
+          <img src="<%=path%>" class="img card-img-top img-fluid" onclick="modalopener(this.src,this.alt)" style="padding: 0px;" alt="<%=title%>">
           <div class="card-body" style="padding: 10px;">
-            <h3 class="card-title"><%=photolist[i].title%></h3>
+            <i class="fa fa-heart" id="like" aria-hidden="true" style="color: white;" onclick="likeToggler()"></i>
+            
+            <h3 class="card-title"><%=title%></h3>
             <h5 class="card-title">Category : <span
                 style="display:inline; color: blue;"><%=photolist[i].category%></span>
             </h5>
@@ -174,7 +194,7 @@
                     &nbsp;
                   </a>
 
-                  <a href="https://www.instagram.com/craving_for_art/?hl=en">
+                  <a href="https://www.instagram.com/v.crave.art/">
                     <span class="fa-stack fa-2x">
                       <i class="fa fa-circle fa-stack-2x"></i>
                       <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
