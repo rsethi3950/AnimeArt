@@ -26,6 +26,7 @@ app.get('/',function(req,res){
 	Photo.find({}, ['path','title','category','caption'], {sort:{ _id: -1} }, function(err, photos) {
      if(err) throw err;
      res.render('index', { photolist : photos });   
+     console.log(photos);
 });	
 })
 
