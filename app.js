@@ -13,7 +13,7 @@ app.use(multer({dest:'./uploads/'}).single('photo'));
 app.use(express.static("./"));//middleware for static files, not for ejs files
 // establish mongo connection
 
-const url= "mongodb+srv://Riya:fPAeiJWCVe7FkUIT@cluster0.sizlk.mongodb.net/app?retryWrites=true&w=majority";
+const url= "mongodb+srv://Riya:<pass>@cluster0.sizlk.mongodb.net/app?retryWrites=true&w=majority";
 mongoose.connect(url, { useNewUrlParser: true,  useUnifiedTopology: true });
 var photoSchema = new Schema({ 
 	path: String,
